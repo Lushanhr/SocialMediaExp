@@ -1,6 +1,6 @@
 {
   "selection_strategy": "greedy",
-  "num_candidates": 1207,
+  "num_candidates": 1203,
   "num_selected": 40,
   "global_pop_fluct": 0.2315980262968029,
   "global_pop_min": 0.18057224564182084,
@@ -10,18 +10,18 @@
     "pop_min": 0.18057224564182084,
     "pop_max": 0.22239242133644802,
     "pop_fluct": 0.2315980262968029,
-    "orig_len_mean": 73.1,
-    "resample_len_mean": 87.6,
-    "len_diff_mean": 23.3
+    "orig_len_mean": 67.5,
+    "resample_len_mean": 84.5,
+    "len_diff_mean": 25.7
   },
   "group_2": {
     "size": 20,
     "pop_min": 0.18057224564182084,
     "pop_max": 0.22239242133644802,
     "pop_fluct": 0.2315980262968029,
-    "orig_len_mean": 70.0,
-    "resample_len_mean": 87.75,
-    "len_diff_mean": 22.55
+    "orig_len_mean": 67.35,
+    "resample_len_mean": 84.55,
+    "len_diff_mean": 27.0
   },
   "feeds": {
     "pair_g1_A": 20,
