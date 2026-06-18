@@ -43,6 +43,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--media-base", default="https://media.githubusercontent.com/media/Lushanhr/SocialMediaExp/refs/heads/main/test_images_811")
     parser.add_argument("--img-src-dir", default=os.path.join("/data/Lushanhr/popularity", "data/ICIP/train_imgs"))
     parser.add_argument("--img-dst-dir", default=os.path.join(exp_root, "test_images_811_paired"))
+    parser.add_argument("--exclude-ids", default="", help="Comma-separated item IDs to exclude (e.g. '36840129733,37493702046')")
     parser.add_argument("--copy-images", action="store_true", help="Copy selected images into dst dir")
     parser.add_argument("--output-selected-csv", default=os.path.join(exp_root, "selected_targets_paired.csv"))
     parser.add_argument("--output-feed-csv", default=os.path.join(exp_root, "social_feed_paired_test.csv"))
@@ -326,8 +327,12 @@ def main() -> None:
         zip(resample_df[args.resample_id_col].astype(str), resample_df[args.resample_text_col].astype(str))
     )
 
+    exclude_ids = set(args.exclude_ids.split(",")) if args.exclude_ids else set()
+
     candidates: List[Candidate] = []
     for iid in test_ids:
+        if iid in exclude_ids:
+            continue
         if iid not in merged_dict or iid not in resample_map:
             continue
         orig = (merged_dict[iid]["caption"] or "").strip()
