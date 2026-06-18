@@ -1,6 +1,6 @@
 {
   "selection_strategy": "greedy",
-  "num_candidates": 1201,
+  "num_candidates": 1208,
   "num_selected": 40,
   "global_pop_fluct": 0.2315980262968029,
   "global_pop_min": 0.18057224564182084,
@@ -10,25 +10,23 @@
     "pop_min": 0.18057224564182084,
     "pop_max": 0.22239242133644802,
     "pop_fluct": 0.2315980262968029,
-    "orig_len_mean": 63.65,
-    "resample_len_mean": 81.15,
-    "len_diff_mean": 28.7
+    "orig_len_mean": 71.4,
+    "resample_len_mean": 84.7,
+    "len_diff_mean": 23.3
   },
   "group_2": {
     "size": 20,
     "pop_min": 0.18057224564182084,
     "pop_max": 0.22239242133644802,
     "pop_fluct": 0.2315980262968029,
-    "orig_len_mean": 62.15,
-    "resample_len_mean": 82.2,
-    "len_diff_mean": 28.25
+    "orig_len_mean": 70.15,
+    "resample_len_mean": 86.6,
+    "len_diff_mean": 23.15
   },
   "feeds": {
     "pair_g1_A": 20,
     "pair_g1_B": 20,
     "pair_g2_A": 20,
     "pair_g2_B": 20
-  },
-  "copied_images": 40,
-  "image_dst_dir": "/data/Lushanhr/popularity/CopyGRPO/SocialMediaExp/test_images_811_paired"
+  }
 }
