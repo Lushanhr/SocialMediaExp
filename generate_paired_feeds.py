@@ -323,9 +323,10 @@ def main() -> None:
         merged_dict[iid] = {"label": float(item["label"]), "caption": str(cap) if cap else ""}
 
     test_ids = set(str(x) for x in split[args.split_key])
-    resample_map = dict(
-        zip(resample_df[args.resample_id_col].astype(str), resample_df[args.resample_text_col].astype(str))
-    )
+    resample_map = {
+        str(iid): (str(txt) if pd.notna(txt) else "")
+        for iid, txt in zip(resample_df[args.resample_id_col], resample_df[args.resample_text_col])
+    }
 
     exclude_ids = set(args.exclude_ids.split(",")) if args.exclude_ids else set()
 
